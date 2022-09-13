@@ -1,15 +1,29 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
+import ReactDOM from 'react-dom/client';
 import './index.css';
+//stylesheet
+import "./App.css"
 import App from './App';
 import reportWebVitals from './reportWebVitals';
-import { sendToVercelAnalytics } from './vitals';
+import { BrowserRouter as Router} from "react-router-dom"
+import {store,persistor} from './stores/store';
+import { PersistGate } from 'redux-persist/integration/react';
+import { Provider } from 'react-redux'
+const root = ReactDOM.createRoot(document.getElementById('root'));
 
-ReactDOM.render(
+root.render(
+  <Provider store={store}>
+   <PersistGate loading={null} persistor={persistor}>
   <React.StrictMode>
-    <App />
-  </React.StrictMode>,
-  document.getElementById('root')
+   <Router>
+     <App />
+   </Router>
+  </React.StrictMode>
+  </PersistGate>
+  </Provider>
 );
 
-reportWebVitals(sendToVercelAnalytics);
+// If you want to start measuring performance in your app, pass a function
+// to log results (for example: reportWebVitals(console.log))
+// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
+reportWebVitals();

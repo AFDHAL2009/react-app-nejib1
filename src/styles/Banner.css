@@ -1,0 +1,22 @@
+.lmj-banner {
+  color: black;
+  text-align: left;
+  border-bottom: solid 3px black;
+}
+.lmj-logo {
+  height: 45px;
+  width: 45px;
+  float: left;
+  width: 5%;
+}
+.lmj-banner-row {
+  text-align: left;
+}
+.lmj-banner-title {
+  color: black;
+  text-align: left;
+}
+
+.auth {
+  margin-left: 60%;
+}

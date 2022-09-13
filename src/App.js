@@ -1,25 +1,29 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css"
+import Home from "./components/Home"
+import Header from "./components/Header"
+import About from "./components/About"
+import NotMatch from "./components/NotMatch"
+import SideBar from "./components/SideBar"
+import Login from "./components/Login"
+import Register from "./components/Register"
+import Station from "./components/Station"
+import { HashRouter,Route, Routes } from "react-router-dom"
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-         Hello Afdhal,this the beging for create new app for react
-        </a>
-      </header>
-    </div>
-  );
+
+    <Routes>
+      <Route exact path="/" element={<Home />} />
+      <Route exact path="/home" element={<Home />} />
+      <Route exact path="/about" element={<About />} />
+      <Route exact path="/menu" element={<SideBar />} />
+      <Route exact path="/login" element={<Login />} />
+      <Route exact path="/register" element={<Register />} />
+      <Route exact path="/Station" element={<Station />} />
+      <Route path="*" element={<NotMatch />} />
+    </Routes>
+ 
+  )
 }
 
-export default App;
+export default App
