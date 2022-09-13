@@ -15,7 +15,7 @@ function App() {
           target="_blank"
           rel="noopener noreferrer"
         >
-         Hello Afdhal
+         Hello Afdhal,this the beging for create new app for react
         </a>
       </header>
     </div>
