@@ -4,7 +4,7 @@ const Footer = () => {
     <div>
       <h2 style={{ color: "white", alignSelf: "center", textAlign: "center" }}>
         This website is created by Afdhal Nejib as React JS/reactNative
-        developer
+        developer Copyright © 2022
       </h2>
     </div>
   )

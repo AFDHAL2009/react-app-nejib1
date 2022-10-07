@@ -4,9 +4,8 @@ import Header from "./components/Header"
 import About from "./components/About"
 import NotMatch from "./components/NotMatch"
 import SideBar from "./components/SideBar"
-import Login from "./components/Login"
-import Register from "./components/Register"
-import Station from "./components/Station"
+import Projects from "./components/Projects"
+import Works from "./components/Works"
 import { HashRouter,Route, Routes } from "react-router-dom"
 
 function App() {
@@ -17,9 +16,8 @@ function App() {
       <Route exact path="/home" element={<Home />} />
       <Route exact path="/about" element={<About />} />
       <Route exact path="/menu" element={<SideBar />} />
-      <Route exact path="/login" element={<Login />} />
-      <Route exact path="/register" element={<Register />} />
-      <Route exact path="/Station" element={<Station />} />
+      <Route exact path="/works" element={<Works />} />
+      <Route exact path="/projects" element={<Projects />} />
       <Route path="*" element={<NotMatch />} />
     </Routes>
  

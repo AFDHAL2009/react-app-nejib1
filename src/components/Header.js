@@ -1,5 +1,6 @@
 import React from "react"
-import logo from "../logo.svg"
+//import logo from "../logo.svg"
+import logo from "../assets/images/mern.png"
 import "../styles/Banner.css"
 import { useNavigate } from "react-router"
 import { useSelector, useDispatch } from "react-redux"
@@ -15,28 +16,19 @@ const Header = ({ childToParent }) => {
       <nav className="topnav">
         <img src={logo} alt="La maison jungle" className="lmj-logo" />
         <a href="" onClick={() => navigate("/home")}>
-          Home
-        </a>
-        <a href="" onClick={() => navigate("/station")}>
-          Station
+          HOME
         </a>
         <a href="" onClick={() => navigate("/about")}>
-          About
+         ABOUT ME
         </a>
-        {isSuccessLogin == false ? (
-          <a className="auth" href="" onClick={() => navigate("/login")}>
-            SignIn
-          </a>
-        ) : (
-          <a href="" onClick={() => dispatch(logout())}>
-            LogOut
-          </a>
-        )}
-        {isSuccessLogin == false ? (
-          <a href="" onClick={() => navigate("/register")}>
-            SignUp
-          </a>
-        ) : null}
+        <a href="" onClick={() => navigate("/projects")}>
+          MY PROJECTS
+        </a>
+
+        <a href="" onClick={() => navigate("/works")}>
+        WORK EXAMPLES
+        </a>
+
       </nav>
     </header>
   )
